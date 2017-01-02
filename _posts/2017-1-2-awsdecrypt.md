@@ -73,8 +73,8 @@ Write-Host ""
 Write-Host "Copied password to your Clipboard - You're welcome!" -ForegroundColor yellow
 Write-Host ""
 Read-Host "Press Enter to quit."
-</code>
-</pre>
+<code>
+<pre>
 
 --- End Script Block ---
 
