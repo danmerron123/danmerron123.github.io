@@ -7,9 +7,6 @@ Fairly simple script to grab AWS EC2 Instance defualt password using Powershell 
 
 Allows for searching for instances, or simply provide the full instance name's password you wish to decrypt.
 
---- Start Sctipt Block ---
-
-
 ```powershell
 #DM AWS Credential Decrypter Script
 
@@ -76,6 +73,14 @@ Write-Host ""
 Read-Host "Press Enter to quit."
 ```
 
---- End Script Block ---
+<a href="/scripts/get_aws_credentials.ps1">Download this Script</a>
 
-test
+<h2>Ask a Question about this Script</h2>
+
+<form action="https://formspree.io/danmerron@gmail.com"
+      method="POST">
+    <input type="text" name="name">
+    <input type="email" name="_replyto">
+    <input type="textarea" name="question">
+    <input type="submit" value="Send">
+</form>
