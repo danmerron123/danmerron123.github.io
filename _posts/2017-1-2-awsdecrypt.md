@@ -10,7 +10,7 @@ Allows for searching for instances, or simply provide the full instance name's p
 --- Start Sctipt Block ---
 
 <pre>
-<code>
+<code class="language-powershell">
 #DM AWS Credential Decrypter Script
 
 # Get AWS Instance Passowrd
