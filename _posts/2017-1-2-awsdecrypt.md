@@ -79,9 +79,9 @@ Read-Host "Press Enter to quit."
 
 <form action="https://formspree.io/danmerron@gmail.com"
       method="POST">
-    <p>Name</p>[<input type="text" name="name">
-    <p>Email</p><input type="email" name="_replyto">
-    <p>Question</p><input type="textarea" name="question">
+    <input type="text" name="name" placeholder="Your Name">
+    <input type="email" name="_replyto" placeholder="Your email">
+    <input type="messagebox" name="question" placeholder="Your Question">
     <input type="submit" value="Send">
 </form>
 
