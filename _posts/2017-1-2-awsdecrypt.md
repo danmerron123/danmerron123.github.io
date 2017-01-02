@@ -85,8 +85,6 @@ Read-Host "Press Enter to quit."
     <input type="submit" value="Send">
 </form>
 
-umme smells
-
 <style>
 
 a{
