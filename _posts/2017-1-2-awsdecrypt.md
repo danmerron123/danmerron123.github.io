@@ -53,23 +53,24 @@ if ($ListInstances -eq "y"){
 }
 
 if ($ServerName.count -eq 1){
-$InstanceId = aws ec2 describe-instances --filters "Name=tag:Name,Values=$ServerName" "Name=instance-state-name,Values=running" --query 'Reservations[*].[Instances[*].InstanceId]' --output text --region $region
+    $InstanceId = aws ec2 describe-instances --filters "Name=tag:Name,Values=$ServerName" "Name=instance-state-name,Values=running" --query 'Reservations[*].[Instances[*].InstanceId]' --output text --region $region
 }
 elseif($ServerName.count -ge 2){
-#Get the Password
-$ServerName = Read-host "What is the Instance name?"
-$InstanceId = aws ec2 describe-instances --filters "Name=tag:Name,Values=$ServerName" "Name=instance-state-name,Values=running" --query 'Reservations[*].[Instances[*].InstanceId]' --output text --region $region
-}
+        #Get the Password
+        $ServerName = Read-host "What is the Instance name?"
+        $InstanceId = aws ec2 describe-instances --filters "Name=tag:Name,Values=$ServerName" "Name=instance-state-name,Values=running" --query 'Reservations[*].[Instances[*].InstanceId]' --output text --region $region
+    }
 
 Clear
 
 foreach ($IID in $InstanceID){
-Write-Host "Decrypting password for $ServerName... " -foregroundcolor yellow
-$password = aws ec2 get-password-data --instance-id $IID --query 'PasswordData' --priv-launch-key $pathtokey --output text --region $region
-$password | clip
-$password
-Write-Host ""
+    Write-Host "Decrypting password for $ServerName... " -foregroundcolor yellow
+    $password = aws ec2 get-password-data --instance-id $IID --query 'PasswordData' --priv-launch-key $pathtokey --output text --region $region
+    $password | clip
+    $password
+    Write-Host ""
 }
+
 Write-Host "Copied password to your Clipboard - You're welcome!" -ForegroundColor yellow
 Write-Host ""
 Read-Host "Press Enter to quit."
