@@ -10,8 +10,6 @@ Allows for searching for instances, or simply provide the full instance name's p
 --- Start Sctipt Block ---
 
 
-<pre>
-    <code class="language-powershell">
 ```powershell
 #DM AWS Credential Decrypter Script
 
@@ -76,8 +74,7 @@ Write-Host "Copied password to your Clipboard - You're welcome!" -ForegroundColo
 Write-Host ""
 Read-Host "Press Enter to quit."
 ```
-</code>
-</pre>
+
 --- End Script Block ---
 
 test
