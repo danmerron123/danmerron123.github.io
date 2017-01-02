@@ -84,3 +84,11 @@ Read-Host "Press Enter to quit."
     <p>Question</p><input type="textarea" name="question">
     <input type="submit" value="Send">
 </form>
+
+<style>
+
+a{
+    text-align: right;
+}
+
+</style>
